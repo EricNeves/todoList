@@ -1,0 +1,38 @@
+version: '3'
+services:
+    www:
+        build: 
+            context: ./www
+            dockerfile: Dockerfile
+        container_name: api
+        restart: always
+        ports:
+           - '8000:80'
+        volumes:
+            - ./www:/var/www/html
+        networks:
+            - api
+            - database
+        depends_on:
+            - db
+    db:
+        image: postgres:15.4
+        container_name: db
+        restart: always
+        ports:
+            - '5430:5432'
+        environment:
+            POSTGRES_DB: todo_list
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+        volumes:
+            - db_data:/var/lib/postgresql/data
+            - ./db:/db
+            - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - database
+networks:
+    api:
+    database:
+volumes:
+    db_data:
