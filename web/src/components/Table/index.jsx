@@ -1,8 +1,8 @@
 import { FaRegEdit, FaTrashRestore } from 'react-icons/fa'
 
-export default function Table({ todos, load, remove }) {
+export default function Table({ listTodos: todos,  handleCheck, load, remove }) {
   return (
-    <div className="relative overflow-x-auto w-3/4 mt-4 mb-2 shadow-md sm:rounded-lg">
+    <div className="relative overflow-x-auto w-full md:w-3/4 mt-4 mb-2 shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -21,10 +21,12 @@ export default function Table({ todos, load, remove }) {
           </tr>
         </thead>
         <tbody>
-          {todos?.map(todo => (
+          {todos
+          .sort((a, b) => a.order - b.order)
+          .map(todo => (
             <tr key={todo.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-800">
               <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <input type="checkbox" value="completed" className="form-checkbox h-4 w-4 text-blue-600" />
+              <input onChange={handleCheck} checked={todo.completed || false}  type="checkbox" value={JSON.stringify(todo)} className="form-checkbox h-4 w-4 text-blue-600" />
               </td>
 
               <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
