@@ -15,6 +15,21 @@ services:
             - database
         depends_on:
             - db
+    web:
+        build:
+            context: ./web
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./web:/app
+        networks:
+            - web
+            - api
+        depends_on:
+            - www
+        command: bash init.sh
     db:
         image: postgres:15.4
         container_name: db
@@ -34,5 +49,6 @@ services:
 networks:
     api:
     database:
+    web:
 volumes:
     db_data:
