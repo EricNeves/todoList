@@ -114,7 +114,7 @@ class TodoService implements ITodoService
             if (empty($todo)) {
                 return ['error' => 'Sorry, todo not found.'];
             } else {
-                return $todo;
+                return self::fetchTodoByID($id);
             }
         } catch (\Exception $e) {
             if ($e->getMessage() === '42P01') return ['db_error' => 'Error in table todos.']; 

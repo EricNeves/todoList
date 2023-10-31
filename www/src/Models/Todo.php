@@ -122,7 +122,7 @@ class Todo extends Database implements ITodo
             if ($stmt->rowCount() > 0) {
                 return [
                     'id'        => $id,
-                    'completed' => $data['completed'],
+                    'completed' => $data['completed']
                 ];
             } else {
                 return [];
