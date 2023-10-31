@@ -33,6 +33,15 @@ class Core
 
                 $routerFound = true;
 
+                if (Request::getMethod() !== $route['method']) {
+                    Response::json([
+                        'error'   => true,
+                        'success' => false,
+                        'message' => 'Sorry, method not allowed'
+                    ], 405);
+                    return;
+                }
+
                 [$controller, $action] = explode('@', $route['controllerAndAction']);
 
                 $controller = $controllerPrefix.$controller;
