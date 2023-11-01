@@ -62,7 +62,7 @@ Para executar a aplicação serão necessários alguns passos importantes.
 # Clone Repository
 $ git clone https://github.com/EricNeves/todoList
 
-# MyBooksAplication Folder
+# todoList Folder
 $ cd todoList/
 
 # Install Dependencies - ReactJS
