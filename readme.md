@@ -11,9 +11,10 @@
 </h4> 
 
 <p align="center">
-  <img src="https://img.shields.io/github/last-commit/EricNeves/myBooksApplication?style=flat-square&logo=github" alt="Github">
-  <img src="https://img.shields.io/github/languages/top/EricNeves/myBooksApplication?style=flat-square&logo=npm">
-  <img src="https://img.shields.io/github/license/EricNeves/myBooksApplication?style=flat-square&logo=github&color=red">
+  <img src="https://img.shields.io/github/last-commit/ericneves/todoList?style=flat-square&logo=github&logoColor=%23dddddd&label=LAST%20COMMIT&labelColor=%230d1117
+" alt="Github">
+  <img src="https://img.shields.io/github/languages/top/ericneves/todoList?style=flat-square&logo=PHP&logoColor=%238892BF&label=PHP&labelColor=%23dddddd">
+  <img src="https://img.shields.io/github/license/ericneves/todoList?style=flat-square&color=%237f5af0">
 </p>
 
 ![screenshot](.github/screenshotA.png)
@@ -93,7 +94,7 @@ $ docker-compose -f -d --build
 
 ### License 
 
-<img src="https://img.shields.io/github/license/EricNeves/myBooksApplication?style=flat-square&logo=github&color=red">
+<img src="https://img.shields.io/github/license/ericneves/todoList?style=flat-square&color=%237f5af0">
 
 ### Author 🧑‍💻
 <a href="https://www.instagram.com/ericneves_dev/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a> <a href="https://linkedin.com/in/ericnevesrr"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
