@@ -11,7 +11,7 @@
 </h4> 
 
 <p align="center">
-  <img src="https://img.shields.io/github/last-commit/ericneves/todoList?style=flat-square&logo=github&logoColor=%23dddddd&label=LAST%20COMMIT&labelColor=%230d1117" alt="Github">
+  <img src="https://img.shields.io/github/last-commit/ericneves/todoList?style=flat-square&logo=github&logoColor=%23dddddd&label=LAST%20COMMIT&labelColor=%23333333" alt="Github">
   <img src="https://img.shields.io/github/languages/top/ericneves/todoList?style=flat-square&logo=PHP&logoColor=%238892BF&label=PHP&labelColor=%23dddddd">
   <img src="https://img.shields.io/github/license/ericneves/todoList?style=flat-square&color=%237f5af0">
 </p>
