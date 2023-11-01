@@ -19,7 +19,7 @@
 ![screenshot](.github/screenshotA.png)
 ![screenshot](.github/screenshotB.png)
 
-### Description💡
+### Description
 
 **Todo** **List**, um app desenvolvido com **PHP**, **Postgresql**, **ReactJS**, **Tailwind** **CSS**, **Docker** e entre outras tecnologias. A aplicação consiste em gerenciar uma lista afazeres, com funcionalidades para **criar**, **editar** ou **deletar** **tasks**.
 
