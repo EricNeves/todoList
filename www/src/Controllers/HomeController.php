@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Http\Request;
 use App\Http\Response;
+use App\Utils\RenderView;
 
 class HomeController 
 {
@@ -14,11 +15,12 @@ class HomeController
      */
     public function index(Request $request, Response $response)
     {
-        return $response::json([
-            'error'   => false,
-            'success' => true,
-            'author'  => 'Eric Neves <github.com/ericneves>',
-            'message' => 'Welcome to the API.',
-        ], 200);
+        try {
+            RenderView::render('home', [
+                'title' => 'Home Page',
+            ]);
+        } catch (\Exception $err) {
+            echo $err->getMessage();
+        }
     }
 }
