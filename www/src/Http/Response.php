@@ -24,10 +24,26 @@ class Response implements IResponse
         echo json_encode($data, JSON_UNESCAPED_SLASHES);
     }
 
-    public static function headers(array $headers = ['Content-Type:', 'application/json'])
+
+    /**
+     *
+     * @param  array $headers
+     * @return void
+     */
+    public static function setHeaders(array $headers = ['Content-Type:', 'application/json']): void
     {
         foreach ($headers as $key => $value) {
             header("$key: $value");
         }
+    }
+
+    /**
+     *
+     * @param  string $url
+     * @return void
+     */
+    public static function redirect(string $url): void 
+    {
+        header("Location: $url");
     }
 }
