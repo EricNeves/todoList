@@ -13,16 +13,21 @@ class Response implements IResponse
      * @param  array $headers
      * @return void
      */
-    public static function json(array $data = [], int $status = 200, array $headers = []): void
+    public static function json(array $data = [], int $status = 200, array $headers = ['Content-Type:', 'application/json']): void
     {
         http_response_code($status);
-
-        header('Content-Type: application/json');
 
         foreach ($headers as $key => $value) {
             header("$key: $value");
         }
 
         echo json_encode($data, JSON_UNESCAPED_SLASHES);
+    }
+
+    public static function headers(array $headers = ['Content-Type:', 'application/json'])
+    {
+        foreach ($headers as $key => $value) {
+            header("$key: $value");
+        }
     }
 }
