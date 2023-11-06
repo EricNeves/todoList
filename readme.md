@@ -10,6 +10,8 @@
   Aplicação Full Stack desenvolvida com PHP, PostgreSQL, ReactJS, Tailwind CSS e Docker.
 </h4> 
 
+<p align="center">Data de criação: Oct 29, 2023</p>
+
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/ericneves/todoList?style=flat-square&logo=github&logoColor=%23dddddd&label=LAST%20COMMIT&labelColor=%23333333" alt="Github">
   <img src="https://img.shields.io/github/languages/top/ericneves/todoList?style=flat-square&logo=PHP&logoColor=%238892BF&label=PHP&labelColor=%23dddddd">
